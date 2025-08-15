@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Press Start 2P', monospace;
+}
+
+/* Pixel Art Styles */
+.pixel-art {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-text {
+  font-family: 'Press Start 2P', monospace;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.pixel-shadow {
+  box-shadow: 
+    4px 4px 0px rgba(0, 0, 0, 0.3),
+    8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-button {
+  transition: all 0.1s ease;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.pixel-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 
+    4px 6px 0px rgba(0, 0, 0, 0.3),
+    8px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-button:active {
+  transform: translateY(1px) !important;
+  box-shadow: 
+    2px 2px 0px rgba(0, 0, 0, 0.3),
+    4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.pixel-item {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: contrast(1.1) saturate(1.2);
+}
+
+.pixel-crop {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  filter: contrast(1.1) saturate(1.2);
+}
+
+.pixel-slot {
+  transition: all 0.1s ease;
+}
+
+.pixel-slot:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-farm-slot {
+  transition: all 0.1s ease;
+}
+
+.pixel-farm-slot:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-locked-slot {
+  transition: all 0.1s ease;
+  background: repeating-linear-gradient(
+    45deg,
+    #374151,
+    #374151 4px,
+    #4b5563 4px,
+    #4b5563 8px
+  );
+}
+
+.pixel-locked-slot:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-grass-tile {
+  transition: all 0.1s ease;
+}
+
+.pixel-grass-tile:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pixel-grass-pattern {
+  background-image: 
+    radial-gradient(circle at 20% 30%, #22c55e 1px, transparent 1px),
+    radial-gradient(circle at 60% 20%, #16a34a 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, #22c55e 1px, transparent 1px),
+    radial-gradient(circle at 30% 80%, #15803d 1px, transparent 1px),
+    radial-gradient(circle at 70% 50%, #22c55e 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+.pixel-heart {
+  background: linear-gradient(45deg, #dc2626, #ef4444);
+  clip-path: polygon(50% 20%, 80% 0%, 100% 50%, 50% 100%, 0% 50%, 20% 0%);
+}
+
+.pixel-stamina {
+  background: linear-gradient(45deg, #2563eb, #3b82f6);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.pixel-gold {
+  background: linear-gradient(45deg, #ca8a04, #eab308);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+
+.pixel-watering-can {
+  background: linear-gradient(45deg, #1d4ed8, #3b82f6);
+  border-radius: 20% 60% 40% 80%;
+}
+
+.pixel-quantity {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.pixel-watered-soil {
+  background: linear-gradient(45deg, #d2b48c, #deb887);
+  background-image: 
+    radial-gradient(circle at 20% 30%, #60a5fa 1px, transparent 1px),
+    radial-gradient(circle at 60% 20%, #3b82f6 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, #60a5fa 1px, transparent 1px),
+    radial-gradient(circle at 30% 80%, #3b82f6 1px, transparent 1px),
+    radial-gradient(circle at 70% 50%, #60a5fa 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.pixel-sun {
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.pixel-coin {
+  background-image: url('https://mocha-cdn.com/01989ecc-9860-7e78-9469-c7b3132b0b84/coin_spin.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Spoilage effects */
+.pixel-spoiling {
+  animation: spoiling-pulse 2s ease-in-out infinite;
+}
+
+@keyframes spoiling-pulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.35; }
+}
+
+.pixel-rotten {
+  animation: rotten-shake 0.5s ease-in-out infinite;
+}
+
+@keyframes rotten-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-1px); }
+  75% { transform: translateX(1px); }
+}
+
+/* Arena and battle effects */
+.pixel-glow {
+  box-shadow: 
+    inset 0 0 10px rgba(255, 255, 255, 0.2),
+    0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.pixel-shadow-inner {
+  box-shadow: 
+    inset 4px 4px 0px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 0px rgba(255, 255, 255, 0.1);
+}
+
+/* Loading animations */
+@keyframes arena-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.arena-loading {
+  animation: arena-pulse 2s ease-in-out infinite;
+}
+
+/* Arena item pop animation */
+@keyframes arena-item-pop {
+  0%, 100% { 
+    transform: translateX(0) translateY(0);
+  }
+  10% { 
+    transform: translateX(-2px) translateY(-1px);
+  }
+  20% { 
+    transform: translateX(2px) translateY(1px);
+  }
+  30% { 
+    transform: translateX(-1px) translateY(-2px);
+  }
+  40% { 
+    transform: translateX(1px) translateY(2px);
+  }
+  50% { 
+    transform: translateX(-2px) translateY(1px);
+  }
+  60% { 
+    transform: translateX(2px) translateY(-1px);
+  }
+  70% { 
+    transform: translateX(-1px) translateY(-1px);
+  }
+  80% { 
+    transform: translateX(1px) translateY(1px);
+  }
+  90% { 
+    transform: translateX(-1px) translateY(0);
+  }
+}
+
+.arena-item-pop {
+  animation: arena-item-pop 0.3s ease-in-out;
+}
+
+/* Drag and drop styles */
+.drag-over {
+  background: linear-gradient(45deg, rgba(34, 197, 94, 0.3), rgba(34, 197, 94, 0.1)) !important;
+  border: 2px dashed #22c55e !important;
+  transform: scale(1.05) !important;
+}
+
+.drag-invalid {
+  background: linear-gradient(45deg, rgba(239, 68, 68, 0.3), rgba(239, 68, 68, 0.1)) !important;
+  border: 2px dashed #ef4444 !important;
+  transform: scale(1.05) !important;
+}
+
+.dragging {
+  opacity: 0.5 !important;
+  transform: scale(0.95) !important;
+}
+
+[draggable="true"] {
+  cursor: grab;
+}
+
+[draggable="true"]:active {
+  cursor: grabbing;
+}
+
+/* Volume slider styles */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-track {
+  background: #4c1d95;
+  height: 8px;
+  border-radius: 4px;
+  border: 2px solid #312e81;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background: #7c3aed;
+  border-radius: 2px;
+  border: 2px solid #5b21b6;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #8b5cf6;
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-moz-range-track {
+  background: #4c1d95;
+  height: 8px;
+  border-radius: 4px;
+  border: 2px solid #312e81;
+}
+
+.slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  background: #7c3aed;
+  border-radius: 2px;
+  border: 2px solid #5b21b6;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.slider:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slider:disabled::-webkit-slider-thumb {
+  cursor: not-allowed;
+}
+
+.slider:disabled::-moz-range-thumb {
+  cursor: not-allowed;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .pixel-text {
+    font-size: 0.75rem;
+  }
+  
+  .pixel-slot {
+    min-height: 40px;
+  }
+  
+  .pixel-farm-slot {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
